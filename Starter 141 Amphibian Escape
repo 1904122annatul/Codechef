@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+int main() {
+	// your code goes here
+    ll tt;
+    cin>>tt;
+    while(tt--){
+        ll n,k,h;
+        cin>>n>>k>>h;
+        ll tot=0;
+        for(ll i=1;i<=n;i++){
+            if(i>=h){
+                tot+=n;
+                continue;
+            }
+            ll speed=(h-i)/(k-1);
+            if((h-i)%(k-1)!=0) speed++;
+            ll b=i-speed;
+            if(b>0) tot+=b;
+        }
+        cout<<tot<<endl;
+    }
+}
