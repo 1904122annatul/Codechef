@@ -1,0 +1,23 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int tt;
+    cin>>tt;
+    while(tt--){
+        int n;
+        cin>>n;
+        int ct=0;
+        if(n%2==1) {
+            n--;
+            ct++;
+        }
+        for(int i=1;i<=n/2;i++ ){
+            if(i!=n-i+1)
+                cout<<i<<" "<<n-i+1<<" ";
+        }
+        if(ct==1) cout<<n+1;
+        cout<<endl;
+    }
+}
