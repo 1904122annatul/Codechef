@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int tt;
+    cin>>tt;
+    while(tt--){
+        int n,m;
+        cin>>n>>m;
+        getchar();
+        string s1,s2;
+        cin>>s1>>s2;
+        int mn=100000;
+        for(int i=0;i<=n-m;i++){
+            int ct=0;
+            for(int j=0,k=i;j<m;j++,k++){
+                if(s2[j]!=s1[k]) ct++;
+            }
+            mn=min(mn,ct);
+        }
+        cout<<mn<<endl;
+    }
+}
