@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    long long int tt;
+    cin>>tt;
+    while(tt--){
+        long long int n;
+        cin>>n;
+        map<long long int,long long int>mp;
+        for(long long int i=0;i<n;i++){
+            long long int  x;
+            cin>>x;
+            mp[x]++;
+        }
+        long long int tot=n;
+        for(auto it=mp.begin();it!=mp.end();it++){
+            long long int pp=it->first*(n-it->second);
+            tot=min(tot,pp);
+        }
+        cout<<tot<<endl;
+    }
+}
