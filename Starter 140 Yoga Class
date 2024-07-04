@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int tt;
+    cin>>tt;
+    while(tt--){
+        int n,x,y;
+        cin>>n>>x>>y;
+        int pp=((n/2)*y)+(n%2)*x;
+        cout<<max(n*x,pp)<<endl;
+    }
+}
